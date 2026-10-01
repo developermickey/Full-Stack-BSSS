@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.meet-member {
+  width: 100%;
+  height: 100vh;
+  background-color: beige;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 0px;
+}
+
+.top-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-section .top-heading {
+  max-width: 350px;
+  font-size: 44px;
+  line-height: 54px;
+}
+
+.top-section .top-right {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.top-section .top-right p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.top-section .top-right button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  background-color: yellowgreen;
+}
+
+.bottom-section {
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+}
+
+.bottom-section .card {
+  width: 100%;
+  max-width: 250px;
+}
+
+.bottom-section .card .img-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+.bottom-section .card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -17,20 +17,20 @@ body {
   position: relative;
 }
 
-/* .red {
+.red {
   width: 150px;
   height: 200px;
   background-color: red;
   position: fixed;
 
   top: 20px;
-} */
+}
 
-/* .green {
+.green {
   width: 300px;
   height: 400px;
   background-color: green;
-} */
+}
 
 .blue {
   width: 150px;
