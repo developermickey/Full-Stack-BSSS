@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Show and Hide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Show & Hide Text</h1>
+    <p id="text">Hello This is Mickey.</p>
+
+    <button id="hideShow" onclick="showHide()">Show/Hide</button>
+
+    <script>
+        function showHide(){
+             let text =  document.getElementById("text");
+            //  let hideShow =  document.getElementById("hideShow");
+
+             if(text.style.display === "none"){
+                text.style.display = "block";
+                // hideShow.innerText = "Hide"
+             }else {
+                text.style.display = "none";
+                // hideShow.innerText = "Show"
+             }
+        }
+        
+    </script>
+    
+</body>
+</html>
