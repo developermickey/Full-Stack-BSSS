@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Notes Manager</h1>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="noteInput" placeholder="Enter a new task...">
+            <button id="addBtn">Add Note</button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="notes-list" id="notesList">
+            <div class="note-item">
+                <input type="checkbox" class="note-checkbox">
+                <span class="note-text">Web Development Project Class 23 </span>
+                <div class="note-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+            <div class="note-item">
+                <input type="checkbox" class="note-checkbox">
+                <span class="note-text">Web Development Project Class 23 </span>
+                <div class="note-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+            <div class="note-item">
+                <input type="checkbox" class="note-checkbox">
+                <span class="note-text">Web Development Project Class 23 </span>
+                <div class="note-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+            <div class="note-item">
+                <input type="checkbox" class="note-checkbox">
+                <span class="note-text">Web Development Project Class 23 </span>
+                <div class="note-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="stats">
+            <span id="totalCount">Total: 0</span>
+            <span id="activeCount">Active: 0</span>
+            <span id="completedCount">Completed: 0</span>
+        </div>
+    </div>
+    
+</body>
+</html>
