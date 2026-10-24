@@ -1338,5 +1338,573 @@ FLEX ITEM (children)
 
 ---
 
+### 📖 DAY 1: HTML Introduction & Basics
+
+**Overview:** First day covering fundamental HTML concepts with hands-on practice.
+
+**Key Topics Covered:**
+- HTML5 Document Structure (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`)
+- Headings (h1-h6)
+- Paragraphs & Text Formatting (`<i>`, `<b>`, `<strong>`, `<em>`, `<mark>`, `<br>`)
+- Anchor Tags (`<a>`) - external links with `target="_blank"`
+- Images (`<img>`) - with width, height, alt, title attributes
+- Lists: Ordered (`<ol>`), Unordered (`<ul>`), Description (`<dl>`, `<dt>`, `<dd>`)
+- Semantic vs Non-Semantic Tags
+  - **Semantic:** `<section>`, `<header>`, `<footer>`, `<main>`, `<article>`, `<aside>`, `<strong>`, `<em>`, `<mark>`, `<details>`, `<time>`
+  - **Non-Semantic:** `<div>`
+- Media: `<video>` (with controls, autoplay), `<audio>` (with controls, muted)
+- Tables: `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`, `border` attribute
+- Forms: `<form>`, `<label>`, `<input>` types (text, number, email, password, file), `<button type="submit">`
+
+**Practice File:** `Day1/index.html` - Comprehensive demo page covering all above topics
+
+**HTML Comments:** `<!-- comment -->` (shortcut: `Ctrl + /`)
+
+---
+
+### 📖 DAY 7: CSS Introduction - Basic Styling
+
+**Overview:** Introduction to CSS (Cascading Style Sheets) with basic selectors and properties.
+
+**Key Topics:**
+- **CSS Reset:** Universal selector (`*`) for margin, padding, box-sizing
+- **HTML/Body Full Height:** `width: 100%; height: 100%;`
+- **External CSS:** `<link rel="stylesheet" href="main.css">`
+- **Tag Selectors:** `h1`, `p`
+- **CSS Properties:**
+  - `font-size`, `color`, `font-weight`, `font-style`, `text-transform`
+  - `margin-bottom`, `padding`
+  - `background-color`, `color`
+
+**Files:**
+- `Day7/index.html` - Basic HTML with h1 and p tags
+- `Day7/main.css` - Reset + styling for h1 (yellow, 64px) and p (italic, capitalize)
+
+**Key Concepts:**
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 64px;
+  color: yellow;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+```
+
+---
+
+### 📖 DAY 8: CSS Layout & Positioning
+
+**Overview:** CSS positioning, flexbox basics, viewport units, and SVG animation.
+
+**Key Topics:**
+- **Viewport Units:** `vw` (view width), `vh` (view height)
+- **CSS Selectors:** ID (`#`), Class (`.`), Descendant combinator
+- **Box Model:** `box-sizing: border-box`
+- **Positioning:** `position: absolute`, `top/left: 50%`, `transform: translate(-50%, -50%)` for centering
+- **Flexbox Preview:** `display: flex`, `align-items`, `justify-content`
+- **Border Radius:** `border-radius: 10px`, `50px` (pill shape)
+- **SVG Animation:** CSS transitions on hover (`rotate`, `scale`)
+
+**Files:**
+- `Day8/index.html` - Hero section with centered container
+- `Day8/style.css` - Complete styling with positioning
+- `Day8/new.html` - Animated SVG icon with hover effects
+
+**Key CSS Concepts:**
+```css
+#hero-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  background-color: yellowgreen;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* SVG Animation */
+.animated-icon .circle-group {
+  transform-origin: 41px 40.5px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animated-icon:hover .circle-group {
+  transform: rotate(-90deg) scale(1.3);
+}
+```
+
+---
+
+### 📖 DAY 9: Flexbox Layout (Already Documented)
+*See Day 9 Flexbox Notes above for complete details.*
+
+---
+
+### 📖 DAY 10: Portfolio Website - HTML Structure
+
+**Overview:** Building a professional portfolio website with semantic HTML.
+
+**Key Topics:**
+- **Navigation Bar:** Logo, Menu links, CTA Button
+- **Hero Section:** Profile image, Name, Description, Social icons, CTA button, Company logos
+- **External Resources:** Remixicon icons (`ri-facebook-circle-line`, `ri-twitter-x-line`, etc.)
+- **Semantic Structure:** `<header>`, `<section>`, `<nav>`, `<img>`, `<h2>`, `<p>`, `<button>`
+
+**File:** `Day10/portfolio-website/index.html`
+
+**Structure:**
+```html
+<header class="navbar">
+  <div class="container">
+    <div class="nav-items">
+      <div class="nav-logo-wrapper"><img class="nav-logo" src="./img/logo.webp"></div>
+      <nav class="nav-menus">
+        <a class="nav-menu-item" href="">Home</a>
+        <a class="nav-menu-item" href="">About</a>
+        <a class="nav-menu-item" href="">Services</a>
+        <a class="nav-menu-item" href="">Works</a>
+        <a class="nav-menu-item" href="">Contact</a>
+      </nav>
+      <button class="nav-btn">Hire Me <i class="ri-question-answer-line"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-wrapper">
+      <div class="hero-left">
+        <div class="hero-img-wrapper"><img class="hero-profile-img" src="./img/profile.png"></div>
+        <h2>Bentos Walker</h2>
+        <p>I am a Web Designer based in san francisco.</p>
+        <div class="hero-social-icons"><i class="ri-facebook-circle-line"></i>...</div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-r-top">...</div>
+        <div class="hero-r-bottom"><h2>Company I Worked With</h2>...</div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+---
+
+### 📖 DAY 11: Portfolio Website (Continued)
+**Note:** Day 11 contains a `portfolio-website` folder - continuation of Day 10 project.
+
+---
+
+### 📖 DAY 12: Portfolio Website (Continued)
+**Note:** Day 12 contains a `portfolio-website` folder - further development of portfolio project.
+
+---
+
+### 📖 DAY 13: YouTube Website Clone
+
+**Overview:** Building a YouTube-style video platform layout with HTML & CSS.
+
+**Key Topics:**
+- **Header:** Menu button, Logo, Search box (with mic), Create button, Notifications, Profile
+- **Sidebar Navigation:** Home, Shorts, Subscriptions, You, History, Explore sections
+- **Main Content Grid:** Video cards with thumbnails, channel info, views, timestamps
+- **CSS Imports:** Google Fonts (Inter, Poppins), Remixicon icons
+- **Card Layout:** `.card` with `.img-wrapper` and `.card-bottom` (profile, title, view-info)
+
+**File:** `Day13/YouTube Website/index.html` (359 lines with embedded CSS import)
+
+**Structure:**
+```html
+<header class="header">
+  <div class="header-left">
+    <button class="menu-btn"><i class="ri-menu-line"></i></button>
+    <a href="#" class="logo"><img src="./img/logo.svg" width="100"></a>
+  </div>
+  <div class="header-center">
+    <form class="search-box"><input type="search" placeholder="Search"><button class="search-btn"><i class="ri-search-line"></i></button></form>
+    <button class="mic-btn"><i class="ri-mic-line"></i></button>
+  </div>
+  <div class="header-right">
+    <div class="create"><i class="ri-add-line"></i><span class="create-text">Create</span></div>
+    <div class="notification"><i class="ri-notification-line"></i><span class="counter">9+</span></div>
+    <div class="profile"><img src="..." width="30" height="30"></div>
+  </div>
+</header>
+
+<div class="page-layout">
+  <aside class="sidebar">
+    <div class="sidebar-nav">...</div>
+    <div class="sidebar-nav"><h3>Explore</h3>...</div>
+    <div class="sidebar-nav"><h3>More from YouTube</h3>...</div>
+  </aside>
+  <main class="main-content">
+    <div class="card">...</div>
+    <!-- 12 video cards -->
+  </main>
+</div>
+```
+
+---
+
+### 📖 DAY 14: YouTube Website (Continued)
+**Note:** Day 14 contains a `YouTube Website` folder - continuation of Day 13 project.
+
+---
+
+### 📖 DAY 15: JavaScript Basics - DOM Manipulation
+
+**Overview:** Introduction to JavaScript with three interactive mini-projects.
+
+**Key Topics:**
+- **DOM Selection:** `document.getElementById()`, `document.querySelector()`
+- **Event Handling:** `onclick` attribute, `addEventListener()`
+- **DOM Manipulation:** `innerText`, `style.display`, `style.backgroundColor`
+- **Variables:** `let`, `const`
+- **Functions:** Declaration, parameters, conditional logic
+
+**Three Practice Projects:**
+
+**1. Counter App** (`Day15/Tasks/Counter-App/`)
+```html
+<h1>Counter App</h1>
+<div id="count">0</div>
+<button onclick="inCre()">+1</button>
+<button onclick="deCre()">-1</button>
+```
+```javascript
+let count = 0;
+let meraCount = document.getElementById("count");
+function inCre() { count++; meraCount.innerText = count; }
+function deCre() { count--; if (count >= 0) meraCount.innerText = count; }
+```
+
+**2. Background Color Change** (`Day15/Tasks/BG-Color-Change/`)
+```javascript
+function bgChange() {
+  document.body.style.backgroundColor = "green";
+}
+```
+
+**3. Text Show/Hide** (`Day15/Tasks/Text-Show-Hide/`)
+```javascript
+function showHide() {
+  let text = document.getElementById("text");
+  if (text.style.display === "none") {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+```
+
+---
+
+### 📖 DAY 16: Restaurant Website - Project Start
+**Note:** Day 16 contains a `restaurant-website` folder - beginning of restaurant project.
+
+---
+
+### 📖 DAY 17: Restaurant Website (Continued)
+**Note:** Day 17 contains a `restaurant-website` folder - continuation.
+
+---
+
+### 📖 DAY 18: Restaurant Website (Continued)
+**Note:** Day 18 contains a `restaurant-website` folder - continuation.
+
+---
+
+### 📖 DAY 19: Restaurant Website (Continued)
+**Note:** Day 19 contains a `restaurant-website` folder - continuation.
+
+---
+
+### 📖 DAY 20: Restaurant Website (Continued)
+**Note:** Day 20 contains a `restaurant-website` folder - continuation.
+
+---
+
+### 📖 DAY 21: Blogging Website - "The Quchange"
+
+**Overview:** Complete blogging website with blog cards grid layout.
+
+**Key Topics:**
+- **Navigation Bar:** Logo, Menu links (Home, About Us, All Blog, Contact Us)
+- **Blog Cards Grid:** Responsive card layout with flexbox
+- **Card Structure:** Image wrapper, Title, Category badge, Date, Excerpt
+- **Footer:** Copyright notice
+- **Google Fonts:** Poppins (100-900 weights)
+- **CSS Reset:** Universal selector with box-sizing
+
+**Files:**
+- `Day21/index.html` - Blog homepage with 10 blog cards
+- `Day21/style.css` - Complete styling
+
+**Key CSS:**
+```css
+.cards {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cards .link {
+  width: 450px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  flex: 0 0 450px;
+  min-height: 500px;
+}
+
+.nav-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-block .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+```
+
+---
+
+### 📖 DAY 22: Blogging Website - Responsive + Mobile Menu
+
+**Overview:** Enhanced blog website with mobile-responsive hamburger menu and single blog page.
+
+**Key Topics:**
+- **Mobile Hamburger Menu:** CSS-only toggle with JavaScript
+- **Media Queries:** `@media (max-width: 768px)`
+- **Single Blog Page:** `single-blog.html` with detailed article layout
+- **Responsive Cards:** Full-width on mobile (`width: 100%`)
+- **Navigation Icons:** Remixicon menu icon (`ri-menu-3-line`)
+
+**Files:**
+- `Day22/index.html` - Updated with mobile menu icon
+- `Day22/style.css` - Added mobile responsive CSS (lines 119-150)
+- `Day22/main.js` - Menu toggle functionality
+- `Day22/single-blog.html` - Individual blog post page
+
+**Mobile Menu CSS:**
+```css
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 15px; }
+  .nav-block .nav-menu {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9;
+    background-color: #000;
+    width: 100%;
+    top: 80px;
+    left: 0px;
+  }
+  .menu-icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 32px;
+  }
+  .cards .link {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+```
+
+---
+
+### 📖 DAY 23: Notes Management System - Static Version
+
+**Overview:** Notes/Task manager UI with filter functionality (static HTML/CSS).
+
+**Key Topics:**
+- **Input Section:** Text input + Add button
+- **Filter Buttons:** All / Active / Completed (with active state)
+- **Notes List:** Checkbox, text, Edit/Delete actions
+- **Stats Bar:** Total, Active, Completed counters
+- **CSS Transitions:** Hover effects, focus states, button transitions
+- **Visual States:** Completed notes with strikethrough
+
+**Files:**
+- `Day23/index.html` - Complete static UI
+- `Day23/style.css` - Full styling with transitions
+
+**Features:**
+- Filter buttons with `.active` state styling
+- Note items with checkbox, text, edit/delete buttons
+- Completed state: `text-decoration: line-through; color: #999`
+- Stats footer with counts
+
+---
+
+### 📖 DAY 24: Notes Management System - Dynamic (JavaScript + localStorage)
+
+**Overview:** Fully functional notes app with CRUD operations and localStorage persistence.
+
+**Key Topics:**
+- **State Management:** `notes` array from `localStorage`
+- **CRUD Operations:** Create, Read, Update, Delete
+- **Filtering:** All / Active / Completed
+- **Inline Editing:** Click Edit → input field → Save/Cancel
+- **Persistence:** `localStorage.setItem()`, `JSON.parse/stringify`
+- **Event Delegation:** Inline handlers for dynamic elements
+- **XSS Prevention:** `escapeHtml()` function
+- **Global Functions:** Attached to `window` for inline onclick
+
+**Files:**
+- `Day24/index.html` - Clean HTML (notes rendered dynamically)
+- `Day24/style.css` - Enhanced styling with empty states, mobile responsive
+- `Day24/main.js` - Complete application logic (182 lines)
+
+**JavaScript Functions:**
+```javascript
+// State
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
+let currentFilter = "all";
+let editingId = null;
+
+// Core Functions
+addNote()           // Create new note with timestamp
+toggleComplete(id)  // Toggle completed status
+startEdit(id)       // Enter edit mode
+saveEdit(id)        // Save edited text
+cancelEdit()        // Cancel editing
+deleteNote(id)      // Delete with confirmation
+saveNotes()         // Persist to localStorage
+getFilteredNotes()  // Filter by currentFilter
+renderNotes()       // Re-render entire list
+updateStats()       // Update counter display
+escapeHtml(text)    // XSS prevention
+```
+
+**Features:**
+- Enter key to add note
+- Inline editing with Save/Cancel
+- localStorage persistence across sessions
+- Filter buttons (All/Active/Completed)
+- Real-time stats (Total/Active/Completed)
+- Empty states for each filter
+- Mobile responsive (`@media max-width: 480px`)
+
+---
+
+### 📖 DAY 25: CSS Button Styling Practice
+
+**Overview:** Simple button styling exercise with border-radius and transitions.
+
+**File:** `Day25/index.html` + `Day25/style.css`
+
+**CSS:**
+```css
+button {
+  padding: 20px 44px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-size: 24px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transition: background-color 0.3s linear;
+}
+
+/* button:hover {
+  background-color: rgb(37, 74, 221);
+} */
+```
+
+**Key Concepts:**
+- Asymmetric border-radius (top-left + bottom-right)
+- Smooth transition on hover (commented out)
+- Clean button styling
+
+---
+
+## 📁 Complete Project Structure Summary
+
+```
+Full Stack BSSS/
+├── Day1/              # HTML Introduction (index.html)
+├── Day2/              # HTML Basics - Complete Notes + Practice
+├── Day3/              # HTML Practice & Reinforcement
+├── Day4/              # HTML Media & Semantic Practice (5 Tasks)
+├── Day5/              # HTML Tables & Forms
+├── Day6/              # Forms Review + CSS Intro
+├── Day7/              # CSS Introduction (index.html + main.css)
+├── Day8/              # CSS Layout & Positioning (index.html, style.css, new.html)
+├── Day9/              # Flexbox Layout (Complete Notes + Demo)
+├── Day10/             # Portfolio Website (HTML Structure)
+├── Day11/             # Portfolio Website (Continued)
+├── Day12/             # Portfolio Website (Continued)
+├── Day13/             # YouTube Website Clone
+├── Day14/             # YouTube Website (Continued)
+├── Day15/             # JavaScript Basics (3 Mini Projects)
+├── Day16-20/          # Restaurant Website Project
+├── Day21/             # Blogging Website "The Quchange"
+├── Day22/             # Blogging Website + Mobile Menu + Single Page
+├── Day23/             # Notes App - Static UI
+├── Day24/             # Notes App - Dynamic (JS + localStorage)
+├── Day25/             # CSS Button Styling Practice
+├── Animation/         # Additional practice
+├── Counter APP.html   # Standalone counter
+├── HTML_CSS_Practice_Tasks_Slides.md
+└── README.md          # This file
+```
+
+---
+
+## 🎯 Learning Path Summary
+
+| Phase | Days | Focus |
+|-------|------|-------|
+| **HTML Fundamentals** | 1-6 | Document structure, tags, semantic HTML, media, tables, forms |
+| **CSS Basics** | 7-9 | Selectors, box model, positioning, Flexbox |
+| **Project: Portfolio** | 10-12 | Real-world layout, hero sections, navigation |
+| **Project: YouTube Clone** | 13-14 | Complex layouts, sidebar, card grids |
+| **JavaScript Intro** | 15 | DOM manipulation, events, mini-projects |
+| **Project: Restaurant** | 16-20 | Multi-page website development |
+| **Project: Blog Platform** | 21-22 | Blog cards, responsive design, mobile menu |
+| **Project: Notes App** | 23-24 | CRUD, localStorage, state management |
+| **CSS Polish** | 25 | Advanced button styling |
+
+---
+
 **Happy Coding! 🚀**  
 *Remember: Practice makes perfect. Build something every day!*
