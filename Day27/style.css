@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0;
+}
+.navbar {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu .nav-menu-item {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-carts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.nav-carts > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-carts > span i {
+  font-size: 20px;
+}
+
+/* Hero Section CSS */
+
+.hero-section {
+  width: 100%;
+  min-height: 60vh;
+}
+
+.hero-section .row {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.hero-section .row .hero-img {
+  width: 100%;
+}
+
+/* Category Section CSS */
+.category-section {
+  width: 100%;
+  min-height: 30vh;
+}
+
+.category-main {
+  width: 100%;
+  display: flex;
+  gap: 34px;
+}
+
+.category-main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-main .card h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.category-main .card .img-wrapper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.category-main .card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* best selling section css */
+
+.best-selling-section {
+  width: 100%;
+  min-height: 70vh;
+  padding-top: 30px;
+}
+
+.best-selling-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.best-selling-main .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.best-selling-main .top > span {
+  cursor: pointer;
+}
+
+.best-selling-main .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.best-selling-main .bottom .card {
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 4px 4px 10px #dddd;
+}
+.best-selling-main .bottom .card > .img-wrapper {
+  width: 340px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.best-selling-main .bottom .card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.best-selling-main .bottom .card .product-details {
+  padding: 0 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.best-selling-main .bottom .card .product-details .rating i {
+  color: rgb(246, 118, 13);
+}
+.best-selling-main .bottom .card .product-details .price {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.best-selling-main .bottom .card .product-details button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Image Grid Section */
+
+.image-grid-section {
+  width: 100%;
+  min-height: 40vh;
+  padding-top: 30px;
+}
+
+.image-grid-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.left-img,
+.right-img {
+  width: 50%;
+  height: 100%;
+  max-height: 279px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-grid-main img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Stats Grid Section CSS */
+
+.stats-grid-section {
+  width: 100%;
+  height: 130px;
+  padding-top: 60px;
+}
+.stats-grid-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ebf5ed;
+  height: 130px;
+  border-radius: 20px;
+}
+
+.stats-grid-main .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #113e34;
+}
+
+.stats-grid-main .card > i {
+  font-size: 64px;
+}
+.stats-grid-main .card h4 {
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+.stats-grid-main .card p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+/* Footer Section */
+
+.footer-section {
+  width: 100%;
+  height: 40vh;
+  background-color: #113e34;
+  margin-top: 120px;
+  padding: 60px 0px;
+}
+
+.footer-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-main .footer-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+}
+
+.footer-main .footer-top .footer-card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-main .footer-top .footer-card h3 {
+  font-size: 44px;
+}
+
+.footer-main .footer-top .footer-card h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-main .footer-top .footer-card .social-icon {
+  display: flex;
+  gap: 20px;
+  font-size: 26px;
+}
+
+.footer-main .footer-top .footer-card .footer-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-main .footer-top .footer-card .footer-nav-menu a {
+  color: #ddd;
+}
+
+.footer-main .footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  color: #8f8e8e;
+}
+
+.footer-main .footer-bottom a {
+  color: #8f8e8e;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.footer-main .footer-bottom a:last-child {
+  margin-right: 0px;
+}
